@@ -52,6 +52,9 @@ app.get("/api/animals", (req, res) => {
   }
   res.json(results);
 });
+app.get("/", (req, res) => {
+  res.redirect("/api/animals");
+});
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}`);
 });
